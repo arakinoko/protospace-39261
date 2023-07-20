@@ -5,13 +5,9 @@
     <p class="card__summary">
       <%= prototype.catch_copy %>
     </p>
-    <% if current_user %>
-    <%= link_to "/users/#{current_user.id}", class: :card__user do %>
-      by <%= prototype.user.name %>
+    <%= link_to user_path(prototype.user.id), class: :card__user do %>
+    by <%= prototype.user.name %>
     <% end %>
-    <% else %>
-      by <%= prototype.user.name %>
-   <% end %>
   </div>
 </div>
 
